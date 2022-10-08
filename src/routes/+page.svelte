@@ -19,6 +19,8 @@
 		</span>
 
 		to your new<br />SvelteKit app
+		<br />
+		Tom!
 	</h1>
 
 	<h2>

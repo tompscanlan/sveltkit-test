@@ -1,3 +1,10 @@
+<script>
+	import { page } from '$app/stores';
+	import logo from '$lib/images/svelte-logo.svg';
+	import github from '$lib/images/github.svg';
+	let uuid = crypto.randomUUID();
+</script>
+
 <svelte:head>
 	<title>About</title>
 	<meta name="description" content="About this app" />
@@ -7,8 +14,10 @@
 	<h1>About this app</h1>
 
 	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
+		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing
+		the following into your command line and following the prompts:
+		<br />
+		{uuid}
 	</p>
 
 	<pre>npm create svelte@latest</pre>
