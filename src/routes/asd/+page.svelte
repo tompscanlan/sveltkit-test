@@ -2,9 +2,7 @@
 </script>
 
 <section>
-	<h1>
-		to your new<br />SvelteKit app
-	</h1>
+	<h1>this is Asd!</h1>
 </section>
 
 <style>

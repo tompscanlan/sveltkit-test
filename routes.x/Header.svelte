@@ -2,19 +2,23 @@
 	import { page } from '$app/stores';
 	import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
+
+	let menuedge = true;
 </script>
 
 <header>
 	<div class="corner">
-		<a href="https://kit.svelte.dev">
+		<a href="/">
 			<img src={logo} alt="SvelteKit" />
 		</a>
 	</div>
 
 	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
+		{#if menuedge}
+			<svg viewBox="0 0 2 3" aria-hidden="true">
+				<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
+			</svg>
+		{/if}
 		<ul>
 			<li class:active={$page.url.pathname === '/'}>
 				<a href="/">Home</a>
@@ -22,17 +26,26 @@
 			<li class:active={$page.url.pathname === '/about'}>
 				<a href="/about">About</a>
 			</li>
-			<li class:active={$page.url.pathname.startsWith('/sverdle')}>
+			<li class:active={$page.url.pathname.startsWith('/newthing')}>
+				<a href="/newthing">New Thing</a>
+			</li>
+
+			<!-- <li class:active={$page.url.pathname.startsWith('/sverdle')}>
 				<a href="/sverdle">Sverdle</a>
+			</li> -->
+			<li class:active={$page.url.pathname.startsWith('/error')}>
+				<a href="/error">Error</a>
 			</li>
 		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
+		{#if menuedge}
+			<svg viewBox="0 0 2 3" aria-hidden="true">
+				<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
+			</svg>
+		{/if}
 	</nav>
 
 	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
+		<a href="https://github.com/tompscanlan">
 			<img src={github} alt="GitHub" />
 		</a>
 	</div>
